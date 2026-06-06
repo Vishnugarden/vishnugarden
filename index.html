@@ -1,95 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishnu Garden Banquet Hall</title>
-    <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Vishnu Garden Banquet Hall</title>
+
+
+ <link rel="stylesheet" href="style.css" />
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Vishnu Garden</div>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Facilities</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<header class="header">
+ <nav class="navbar">
+   <div class="logo">Vishnu<span>Garden</span></div>
 
-            <button id="menuBtn">☰</button>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Vishnu Garden Banquet Hall</h1>
-            <p>Making Every Celebration Memorable</p>
-            <a href="#contact" class="btn">Book Now</a>
-        </div>
-    </section>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="#home">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#facilities">Facilities</a></li>
+     <li><a href="#gallery">Gallery</a></li>
+     <li><a href="#location">Location</a></li>
+     <li><a href="#booking">Booking</a></li>
+     <li><a href="#contact">Contact</a></li>
+   </ul>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            Vishnu Garden Banquet Hall is the perfect venue for weddings,
-            engagements, birthdays, anniversaries, corporate events, and
-            family celebrations. We provide elegant décor, spacious seating,
-            and exceptional hospitality.
-        </p>
-    </section>
 
-    <section id="services">
-        <h2>Our Facilities</h2>
+   <button class="menu-btn" id="menuBtn">☰</button>
+ </nav>
+</header>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Wedding Events</h3>
-                <p>Beautiful venue for dream weddings.</p>
-            </div>
 
-            <div class="card">
-                <h3>Corporate Events</h3>
-                <p>Professional setup for meetings and conferences.</p>
-            </div>
+<section class="hero" id="home">
+ <div class="hero-content">
+   <p class="tagline">Luxury Banquet Hall</p>
+   <h1>Celebrate Your Royal Moments</h1>
+   <p class="hero-text">
+     A premium destination for weddings, receptions, birthdays, engagements,
+     corporate events, and family celebrations.
+   </p>
 
-            <div class="card">
-                <h3>Catering Services</h3>
-                <p>Delicious food with customizable menus.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="gallery">
-        <h2>Gallery</h2>
+   <div class="hero-buttons">
+     <a href="#booking" class="btn primary-btn">Book Now</a>
+     <a href="#gallery" class="btn secondary-btn">View Gallery</a>
+   </div>
+ </div>
+</section>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">Photo 1</div>
-            <div class="gallery-item">Photo 2</div>
-            <div class="gallery-item">Photo 3</div>
-            <div class="gallery-item">Photo 4</div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
+<section class="section about" id="about">
+ <div class="section-title">
+   <p>About Us</p>
+   <h2>Elegant Venue For Every Occasion</h2>
+ </div>
 
-        <div class="contact-box">
-            <p><strong>Address:</strong> Rohtak Bypass Rd, near New Anaj Mandi, Jind, Haryana 126102</p>
-            <p><strong>Phone:</strong> +91 7400017401</p>
-            <p><strong>Email:</strong> vishnugarden.jind@gmail.com</p>
 
-            <button id="contactBtn">Request Booking</button>
-        </div>
-    </section>
+ <div class="about-container">
+   <div class="about-text">
+     <h3>Welcome to Vishnu Garden</h3>
+     <p>
+       Vishnu Garden Banquet Hall offers a beautiful and comfortable space
+       for your most important celebrations. With royal decoration,
+       spacious seating, premium hospitality, and professional service,
+       we make every event memorable.
+     </p>
 
-    <footer>
-        <p>© 2026 Vishnu Garden Banquet Hall. All Rights Reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
+     <div class="stats">
+       <div>
+         <h4>500+</h4>
+         <span>Guest Capacity</span>
+       </div>
+
+
+       <div>
+         <h4>1000+</h4>
+         <span>Events Hosted</span>
+       </div>
+
+
+       <div>
+         <h4>24/7</h4>
+         <span>Support</span>
+       </div>
+     </div>
+   </div>
+
+
+   <div class="about-card">
+     <h3>Why Choose Us?</h3>
+     <ul>
+       <li>Royal banquet hall ambience</li>
+       <li>Premium decoration setup</li>
+       <li>Spacious parking area</li>
+       <li>Custom catering options</li>
+       <li>Professional event support</li>
+     </ul>
+   </div>
+ </div>
+</section>
+
+
+<section class="section facilities" id="facilities">
+ <div class="section-title">
+   <p>Our Facilities</p>
+   <h2>Everything You Need In One Place</h2>
+ </div>
+
+
+ <div class="facility-grid">
+   <div class="facility-card">
+     <div class="icon">💍</div>
+     <h3>Wedding Events</h3>
+     <p>Perfect setup for weddings, receptions, and engagements.</p>
+   </div>
+
+
+   <div class="facility-card">
+     <div class="icon">🍽️</div>
+     <h3>Catering</h3>
+     <p>Delicious vegetarian and customized menu options.</p>
+   </div>
+
+
+   <div class="facility-card">
+     <div class="icon">🎉</div>
+     <h3>Parties</h3>
+     <p>Celebrate birthdays, anniversaries, and family events.</p>
+   </div>
+
+
+   <div class="facility-card">
+     <div class="icon">🚗</div>
+     <h3>Parking</h3>
+     <p>Spacious parking area for your guests.</p>
+   </div>
+ </div>
+</section>
+
+
+<section class="section gallery" id="gallery">
+ <div class="section-title">
+   <p>Gallery</p>
+   <h2>Beautiful Moments At Vishnu Garden</h2>
+ </div>
+
+
+ <div class="gallery-grid">
+   <div class="gallery-item item1">Wedding Setup</div>
+   <div class="gallery-item item2">Stage Decor</div>
+   <div class="gallery-item item3">Dining Area</div>
+   <div class="gallery-item item4">Night View</div>
+ </div>
+</section>
+
+
+<section class="section map-section" id="location">
+ <div class="section-title">
+   <p>Location</p>
+   <h2>Visit Vishnu Garden Banquet Hall</h2>
+ </div>
+
+
+ <div class="map-container">
+   <iframe
+     src="https://www.google.com/maps?q=https://maps.app.goo.gl/u7Up86iKLfxpkha56&output=embed"
+     width="100%"
+     height="450"
+     style="border:0;"
+     allowfullscreen=""
+     loading="lazy">
+   </iframe>
+ </div>
+
+
+ <div class="direction-wrapper">
+   <a
+     href="https://maps.app.goo.gl/u7Up86iKLfxpkha56?g_st=ic"
+     target="_blank"
+     class="direction-btn">
+     📍 Get Directions
+   </a>
+ </div>
+</section>
+
+
+<section class="section booking" id="booking">
+ <div class="booking-container">
+   <div class="booking-text">
+     <p>Book Your Event</p>
+     <h2>Plan Your Dream Celebration</h2>
+     <span>Fill the form and our team will contact you shortly.</span>
+   </div>
+
+
+   <form class="booking-form" id="bookingForm">
+     <input type="text" id="name" placeholder="Your Name" required />
+     <input type="tel" id="phone" placeholder="Phone Number" required />
+     <input type="date" id="date" required />
+
+
+     <select id="eventType" required>
+       <option value="">Select Event Type</option>
+       <option>Wedding</option>
+       <option>Reception</option>
+       <option>Birthday Party</option>
+       <option>Corporate Event</option>
+       <option>Other</option>
+     </select>
+
+
+     <textarea id="message" placeholder="Your Message"></textarea>
+
+
+     <button type="submit">Submit Booking Request</button>
+   </form>
+ </div>
+</section>
+
+
+<section class="section testimonials">
+ <div class="section-title">
+   <p>Testimonials</p>
+   <h2>What Our Guests Say</h2>
+ </div>
+
+
+ <div class="testimonial-grid">
+   <div class="testimonial-card">
+     <p>“Beautiful venue and excellent service. Our wedding function was managed perfectly.”</p>
+     <h4>Rahul Sharma</h4>
+   </div>
+
+
+   <div class="testimonial-card">
+     <p>“Food, decoration, and staff support were amazing. Highly recommended.”</p>
+     <h4>Priya Verma</h4>
+   </div>
+
+
+   <div class="testimonial-card">
+     <p>“Best banquet hall for family functions. Very spacious and elegant.”</p>
+     <h4>Amit Gupta</h4>
+   </div>
+ </div>
+</section>
+
+
+<section class="section contact" id="contact">
+ <div class="section-title">
+   <p>Contact</p>
+   <h2>Get In Touch</h2>
+ </div>
+
+
+ <div class="contact-box">
+   <p>
+     <strong>📍 Address:</strong>
+     Vishnu Garden, Rohtak Bypass Rd, Near New Anaj Mandi,
+     Jind, Haryana 126102
+   </p>
+
+
+   <p>
+     <strong>📞 Phone:</strong>
+     <a href="tel:+917400017401">+91 74000 17401</a>
+   </p>
+
+
+   <p>
+     <strong>✉️ Email:</strong>
+     <a href="mailto:vishnugarden.jind@gmail.com">
+       vishnugarden.jind@gmail.com
+     </a>
+   </p>
+
+
+   <div class="contact-buttons">
+
+
+       <a href="tel:+917400017401" class="direction-btn">
+           📞 Call Now
+       </a>
+  
+       <a
+           href="https://maps.app.goo.gl/u7Up86iKLfxpkha56?g_st=ic"
+           target="_blank"
+           class="direction-btn">
+           📍 Get Directions
+       </a>
+  
+   </div>
+ </div>
+</section>
+
+
+<footer>
+ <p>© 2026 Vishnu Garden Banquet Hall. All Rights Reserved.</p>
+</footer>
+
+
+<button class="top-btn" id="topBtn">↑</button>
+
+
+<script src="script.js"></script>
 </body>
 </html>
