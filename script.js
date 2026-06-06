@@ -5,6 +5,10 @@ const topBtn = document.getElementById("topBtn");
 const bookingForm = document.getElementById("bookingForm");
 
 
+const GOOGLE_SCRIPT_URL =
+ "https://script.google.com/macros/s/AKfycbzgc0iBolFjBUmaEt3JdALIx2gbAFMDn9_iQLdmNbtn80g6DMOEO0tl7YqLOZs6bR4f/exec";
+
+
 menuBtn.addEventListener("click", () => {
  navLinks.classList.toggle("active");
 });
@@ -36,27 +40,54 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 });
 
 
-bookingForm.addEventListener("submit", function(event) {
+bookingForm.addEventListener("submit", function (event) {
  event.preventDefault();
 
 
- const name = document.getElementById("name").value.trim();
- const phone = document.getElementById("phone").value.trim();
- const date = document.getElementById("date").value;
- const eventType = document.getElementById("eventType").value;
+ const submitButton = bookingForm.querySelector("button");
 
 
- if (name === "" || phone === "" || date === "" || eventType === "") {
+ const formData = {
+   name: document.getElementById("name").value.trim(),
+   phone: document.getElementById("phone").value.trim(),
+   date: document.getElementById("date").value,
+   eventType: document.getElementById("eventType").value,
+   message: document.getElementById("message").value.trim()
+ };
+
+
+ if (
+   formData.name === "" ||
+   formData.phone === "" ||
+   formData.date === "" ||
+   formData.eventType === ""
+ ) {
    alert("Please fill all required fields.");
    return;
  }
 
 
- alert(
-   "Thank you " + name + "! Your booking request has been submitted. Our team will contact you soon."
- );
+ submitButton.disabled = true;
+ submitButton.innerText = "Submitting...";
 
 
- bookingForm.reset();
+ fetch(GOOGLE_SCRIPT_URL, {
+   method: "POST",
+   mode: "no-cors",
+   headers: {
+     "Content-Type": "text/plain"
+   },
+   body: JSON.stringify(formData)
+ })
+   .then(() => {
+     alert("Thank you! Your booking request has been submitted.");
+     bookingForm.reset();
+   })
+   .catch(() => {
+     alert("Something went wrong. Please try again.");
+   })
+   .finally(() => {
+     submitButton.disabled = false;
+     submitButton.innerText = "Submit Booking Request";
+   });
 });
-
