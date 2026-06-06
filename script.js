@@ -3,6 +3,7 @@ const navLinks = document.getElementById("navLinks");
 const header = document.querySelector(".header");
 const topBtn = document.getElementById("topBtn");
 const bookingForm = document.getElementById("bookingForm");
+const dateInput = document.getElementById("date");
 
 
 const GOOGLE_SCRIPT_URL =
@@ -55,6 +56,29 @@ bookingForm.addEventListener("submit", function (event) {
    message: document.getElementById("message").value.trim()
  };
 
+  // Phone number validation: must start with +91 followed by 10 digits, first digit 6-9, not all zeros
+  const phonePattern = /^\+91[6-9]\d{9}$/;
+  if (!phonePattern.test(formData.phone)) {
+    alert("Invalid phone number. It must start with +91 and contain a 10‑digit Indian mobile number starting with 6,7,8, or 9.");
+    return;
+  }
+
+  // Set minimum selectable date to today to prevent past dates
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+  // Validate that the selected date is not in the past
+  const todayCheck = new Date();
+  const selectedDate = new Date(formData.date);
+  // Set time to 0 for comparison of dates only
+  todayCheck.setHours(0,0,0,0);
+  if (selectedDate < todayCheck) {
+    alert("Please select a future date for your event.");
+    return;
+  }
 
  if (
    formData.name === "" ||
