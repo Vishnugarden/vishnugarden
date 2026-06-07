@@ -56,13 +56,6 @@ bookingForm.addEventListener("submit", function (event) {
    message: document.getElementById("message").value.trim()
  };
 
-  // Phone number validation: must start with +91 followed by 10 digits, first digit 6-9, not all zeros
-  const phonePattern = /^\+91[6-9]\d{9}$/;
-  if (!phonePattern.test(formData.phone)) {
-    alert("Invalid phone number. It must start with +91 and contain a 10‑digit Indian mobile number starting with 6,7,8, or 9.");
-    return;
-  }
-
   // Set minimum selectable date to today to prevent past dates
   const today = new Date();
   const yyyy = today.getFullYear();
